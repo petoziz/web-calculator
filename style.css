@@ -1,0 +1,101 @@
+/* Načítanie digitálneho fontu / Load digital font */
+@font-face {
+  font-family: 'Digital7';
+  src: url('fonts/digital-7.italic.ttf') format('truetype');
+}
+
+/* Celé telo stránky / Entire page layout */
+body {
+  background-color: #fffefe;             
+  font-family: Arial, sans-serif;        
+  display: flex;                         
+  justify-content: center;
+  align-items: center;
+  height: 100dvh;                        
+  margin: 0;
+}
+
+/* Kontajner kalkulačky / Calculator container */
+.calculator {
+  background-color: #2e2e2e;             
+  border-radius: 16px;                   
+  box-shadow: 0 10px 20px rgba(0,0,0,0.5); 
+  padding: 20px;
+  width: 320px;
+}
+
+/* Displej / Calculator display */
+#display {
+  width: 100%;
+  height: 80px;
+  font-size: 2.4rem;
+  text-align: right;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 10px;
+  background-color: #e0e0e0;             
+  color: #222;                           
+  box-sizing: border-box;
+  font-family: 'Digital7', monospace;    
+  letter-spacing: 3px;                   
+}
+
+/* Rozloženie tlačidiel / Button layout */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 10px;                             
+}
+
+/* Všeobecné tlačidlo / General button style */
+.btn {
+  padding: 20px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 10px;
+  background-color: #4a4a4a;            
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+/* Hover efekt / Hover effect */
+.btn:hover {
+  background-color: #5c5c5c;
+}
+
+/* Kliknutie / Active click effect */
+.btn:active {
+  background-color: #666;
+}
+
+/* Špeciálne tlačidlá (÷, ×, −, +) / Operator buttons */
+.btn:nth-child(4n) {
+  background-color: #ff9500;
+}
+
+.btn:nth-child(4n):hover {
+  background-color: #e08900;
+}
+
+/* Tlačidlo "=" / Equal button */
+.equals {
+  grid-column: span 2;                  
+  background-color: #00c853;
+  color: white;
+}
+
+.equals:hover {
+  background-color: #00b44a;
+}
+
+/* Tlačidlo "C" / Clear button */
+.btn-clear {
+  background-color: #e53935;
+  color: #fff;
+}
+
+.btn-clear:hover {
+  background-color: #d32f2f;
+}
